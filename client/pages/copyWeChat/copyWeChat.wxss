@@ -1,0 +1,168 @@
+/* pages/framework_7/framework_7.wxss */
+
+.background {
+  background-color: #f0eff5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 200rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+
+.headImage {
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+  border-radius: 10px
+}
+
+.headNick {
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  margin-top: 45rpx;
+}
+
+.wallet {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+}
+
+.walletImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.walletText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.favorites {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+}
+
+.favoritesImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.favoritesText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.myPosts {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.myPostsImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.myPostsText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.cardAndOffer {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardAndOfferImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.cardAndOfferText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.sticker {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.stickerImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.stickerText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.setting {
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx
+}
+
+.settingImage {
+  width: 70rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.settingText {
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+
+.line {
+  width: 690rpx;
+  height: 1px;
+  background-color: #dedede;
+  margin-left: 60rpx;
+}

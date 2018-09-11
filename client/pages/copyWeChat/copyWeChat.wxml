@@ -1,0 +1,73 @@
+<!--pages/framework_7/framework_7.wxml-->
+<view class='background' style='height:{{bgHeight}}px'>
+
+  <view class='header'>
+
+    <image class='headImage' src='../../images/head.jpg'></image>
+
+    <view style='display:flex;flex-direction:column;'>
+
+      <text class='headNick'>.Lee</text>
+
+      <text class='headNick'>WeChatID:</text>
+
+    </view>
+
+  </view>
+
+  <view class='wallet'>
+
+    <image class='walletImage' src='../../images/wallet.png'></image>
+
+    <text class='walletText'>Wallet</text>
+
+  </view>
+
+  <view class='favorites'>
+
+    <image class='favoritesImage' src='../../images/favorites.png'></image>
+
+    <text class='walletText'>Favourites</text>
+
+  </view>
+
+  <view class='line'></view>
+
+  <view class='myPosts'>
+
+    <image class='favoritesImage' src='../../images/myPosts.png'></image>
+
+    <text class='walletText'>My Posts</text>
+
+  </view>
+
+  <view class='line'></view>
+
+  <view class='cardAndOffer'>
+
+    <image class='cardAndOfferImage' src='../../images/cardOffer.png'></image>
+
+    <text class='walletText'>Cards & Offers</text>
+
+  </view>
+
+  <view class='line'></view>
+
+  <view class='sticker'>
+
+    <image class='stickerImage' src='../../images/stickerGallery.png'></image>
+
+    <text class='stickerText'>Sticker Gallery</text>
+
+  </view>
+
+  <view class='setting'>
+  
+    <image class='settingImage' src='../../images/setting.png'></image>
+
+    <text class='settingText'>Settings</text>
+
+  </view>
+
+
+</view>
