@@ -1,1 +1,21 @@
 <!--client/pages/personal/personal.wxml-->
+
+<view class='header'>
+
+<view class='header' style='height:250rpx;justify-content:flex-end'>
+
+<text>.Lee</text>
+
+<image src='../../images/head.jpg' class='headImage'></image>
+
+</view>
+
+<view class='head-bottom'>
+
+<text>余额\n100</text>
+
+<text>积分\n350</text>
+
+</view>
+
+</view>
