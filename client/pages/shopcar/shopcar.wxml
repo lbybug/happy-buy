@@ -1,2 +1,5 @@
-<!--client/pages/shopcar/shopcar.wxml-->
-<text>client/pages/shopcar/shopcar.wxml</text>
+ <checkbox-group bindchange="checkboxChange" >
+
+     <checkbox value="商品"></checkbox>
+       
+   </checkbox-group>
