@@ -1,21 +1,58 @@
-<!--client/pages/personal/personal.wxml-->
+<!-- pages/usercenter/usercenter.wxml -->
+<view>
 
-<view class='header'>
+  <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl" />
+    </view>
+    <open-data type="userNickName" />
+    <!-- <text>.Lee</text> -->
+  </view>
 
-<view class='header' style='height:250rpx;justify-content:flex-end'>
+  <view class="weui-cell" style='margin-right:30rpx' />
 
-<text>.Lee</text>
+  <view class="weui-flex" style='justify-content:space-around'>
+    <block wx:for='{{goodsStatus}}' wx:key='{{item.id}}'>
+      <view class='-column-goods-status-style' bindtap='goodsWhichStatus'>
+        <image src='{{item.url}}' class='-goods-image-style'></image>
+        <view class="weui-cell__bd">
+          <text style='text-align:center'>{{item.status}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
 
-<image src='../../images/head.jpg' class='headImage'></image>
+  <view class="weui-cell" style='margin-right:30rpx;margin-top:50rpx' />
 
-</view>
+  <view class="weui-cells__title">个人服务</view>
 
-<view class='head-bottom'>
+   <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="../../images/be_receipt.png" />
+                    <view class="weui-grid__label">Grid</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
 
-<text>余额\n100</text>
 
-<text>积分\n350</text>
+  <!-- <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>全部订单</text>
+      </view>
+      <view class="weui-cell__ft">查看详情</view>
+    </view>
 
-</view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text>收货地址</text>
+      </view>
+      <view class="weui-cell__ft">管理</view>
+    </view>
 
+  </view> -->
 </view>
