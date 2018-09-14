@@ -1,8 +1,8 @@
-.page__bd {
+/* .page__bd {
   padding-left: 40px;
   padding-right: 40px;
-  text-align: left;
-}
+  /* text-align: left; */
+/* } */ 
 
 .userinfo {
   position: relative;
