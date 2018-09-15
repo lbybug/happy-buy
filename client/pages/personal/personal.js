@@ -51,7 +51,7 @@ Page({
         "name": "收藏"
       }, {
         "id": "service_2",
-        "url": "../copyWeChat/copyWeChat",
+        "url": "../address/address",
         "serviceImage": "../../images/address.png",
         "name": "地址"
       },
@@ -72,22 +72,26 @@ Page({
       "id": "goods_0",
       "name": "耳乐保夏季睡觉护眼罩睡眠遮光透气男女士款耳塞防噪音三件套",
       "goodsImage": "../../goodsImage/200836455467636230.jpg",
-      "price": "￥29.89"
+      "price": "￥29.89",
+      "buyer":"3550"
     }, {
       "id": "goods_1",
       "name": "男士长袖T恤秋季新款圆领卫衣潮流打底衫2018秋衣韩版上衣服男装",
       "goodsImage": "../../goodsImage/608738460262225988.jpg",
-      "price": "￥68.03"
+      "price": "￥68.03",
+        "buyer": "12505"
     }, {
       "id": "goods_2",
       "name": "3D菱形极光玻璃6s苹果x手机壳iphone7plus奢华保护套8p防摔全包女",
       "goodsImage": "../../goodsImage/579207095686205840.jpg",
-      "price": "￥26.54"
+      "price": "￥26.54",
+      "buyer": "350"
     }, {
       "id": "goods_3",
       "name": "人字拖男时尚外穿情侣男士拖鞋夏夹脚防滑凉拖黑色沙滩凉鞋潮室外",
       "goodsImage": "../../goodsImage/772626852914700328.jpg",
-      "price": "￥18.75"
+      "price": "￥18.75",
+        "buyer": "950"
     }]
   },
 

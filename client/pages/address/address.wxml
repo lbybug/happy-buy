@@ -1,0 +1,38 @@
+<!--client/pages/address/address.wxml-->
+<view wx:if='{{addressList.length == 0}}' class='page-bg'>
+  <view class='address-bg'>
+    <image src='../../images/address.png' class='address-image'></image>
+    <view class="weui-cells__title">您还没有添加收货地址</view>
+  </view>
+</view>
+<view wx:else class='page-bg'>
+  <view wx:for='{{addressList}}' wx:key='{{item.id}}'>
+    <view class='address-item-bg' style='margin-top:20rpx'>
+      <view class='address-head-style'>
+        <image src='../../images/location.png' style='width:40rpx;height:40rpx'></image>
+        <view class="page__desc" style='color:#000'>{{item.userName}}</view>
+        <view class="page__desc" style='color:#000'>{{item.telNumber}}</view>
+      </view>
+      <view class="page__desc" style='height:28px;color:#000;margin-left:80rpx;margin-top:30rpx'>{{item.provinceName}}{{item.cityName}}{{item.countyName}}{{item.detailInfo}}</view>
+      <view class="weui-cell" style='margin-right:40rpx;margin-top:30rpx'/>
+      <checkbox style='position:relative;left:30rpx;bottom:15rpx;color:{{item.isDefault?red:black}}'>默认地址</checkbox>
+      <view class='address-head-style' style='position:relative;bottom:15rpx;float:right'>
+        <view class='address-head-style' style='justify-content:flex-start'>
+          <image src='../../images/edit.png' style='width:40rpx;height:40rpx;'></image>
+          <view class="page__desc" style='color:#000'>修改</view>
+        </view>
+        <view class='address-head-style' style='justify-content:flex-start'>
+          <image src='../../images/delete.png' style='width:40rpx;height:40rpx'></image>
+          <view class="page__desc" style='color:#000'>删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='add-address-style'>
+  <view class='add-address-row-style'>
+    <button style='width:45%;' type="primary" bindtap='getWeChatAddress'>添加微信地址</button>
+    <button style='width:45%' type="default">手动添加地址</button>
+  </view>
+</view>
