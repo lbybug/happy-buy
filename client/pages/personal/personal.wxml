@@ -2,6 +2,7 @@
 <view>
 
   <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+  <view>
   <view class="userinfo">
     <view class="userinfo-avatar">
       <open-data type="userAvatarUrl" />
@@ -9,6 +10,9 @@
     <open-data type="userNickName" />
     <!-- <text>.Lee</text> -->
   </view>
+  </view>
+
+   <image class="personal-setting-style" src="../../images/personalSetting.png" bindtap='personalSet'/>
 
   <view class="weui-cell" style='margin-right:30rpx' />
 
@@ -31,7 +35,7 @@
   <view class="weui-cells__title">个人服务</view>
   <view class="page__bd">
     <view class="weui-grids">
-      <block wx:for="{{personalService}}" wx:key="*this">
+      <block wx:for="{{personalService}}" wx:key="{{item.id}}">
         <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="{{item.serviceImage}}" />
           <view class="weui-grid__label">{{item.name}}</view>
@@ -40,6 +44,22 @@
     </view>
   </view>
 
+  <view class="weui-cells__title">猜你喜欢</view>
+  <view class="page__bd">
+    <view>
+      <block wx:for="{{goodsList}}" wx:key="{{item.id}}">
+        <navigator url="{{item.url}}" class="goods-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon goods-image" src="{{item.goodsImage}}" />
+          <view class="weui-grid__label">{{item.name}}</view>
+          <text class="weui-grid__label" style='color:red'>{{item.price}}</text>
+        </navigator>
+      </block>
+    </view>
+  </view>
 
+  <view class="weui-loadmore" style='position:flex;bottom:0' wx:if='{{isAddFavorGoods}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
 
 </view>

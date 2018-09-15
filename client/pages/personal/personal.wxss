@@ -48,3 +48,26 @@
   width: 70rpx;
   height: 70rpx;
 }
+
+.goods-image{
+  width: 350rpx;
+  height: 350rpx;
+}
+
+.goods-grid {
+  position: relative;
+  float: left;
+  padding: 20px 10px;
+  width: 50%;
+  box-sizing: border-box;
+  /* border-right: 1rpx solid #d9d9d9; */
+  /* border-bottom: 1rpx solid #d9d9d9; */
+}
+
+.personal-setting-style{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}
