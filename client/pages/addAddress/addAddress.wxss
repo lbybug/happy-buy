@@ -1,0 +1,15 @@
+/* pages/addAddress/addAddress.wxss */
+
+.add-address-style {
+  width: 100%;
+  height: 150rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.add-address-row-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

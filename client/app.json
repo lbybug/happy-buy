@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/personal/personal",
+    "pages/addAddress/addAddress",
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/shopcar/shopcar",

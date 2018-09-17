@@ -30,7 +30,7 @@
 				{
 					"id": 0,
 					"name": "index",
-					"pathName": "pages/address/address",
+					"pathName": "pages/addAddress/addAddress",
 					"query": ""
 				}
 			]

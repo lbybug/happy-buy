@@ -14,7 +14,11 @@ Page({
     wx.chooseAddress({
       success: (res) => {
         console.log(res)
-        list[list.length] = res
+        if (list.length == 0) {
+          list = that.addWeChatAddress(list, res, true)
+        } else {
+          list = that.addWeChatAddress(list, res, false)
+        }
         that.setData({
           addressList: list
         })
@@ -22,10 +26,49 @@ Page({
     })
   },
 
+  addWeChatAddress: function (list, res, flag) {
+    var that = this
+    list[list.length] = {
+      addressId: "address_"+list.length,
+      cityName: res.cityName,
+      countyName: res.countyName,
+      detailInfo: res.detailInfo,
+      errMsg: "ok",
+      nationalCode: "null",
+      postalCode: "null",
+      provinceName: res.provinceName,
+      telNumber: res.telNumber,
+      userName: res.userName,
+      isDefault: flag
+    }
+    return list
+  },
+
+  addNewAddress: function(len) {
+    wx.navigateTo({
+      url: '../addAddress/addAddress',
+    })
+  },
+
+  updateDefault:function(res){
+    console.log(res)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    // wx.clearStorage()
+    var that = this
+    wx.getStorage({
+      key: 'userAddress',
+      success: function(res) {
+        that.setData({
+          addressList: res.data
+        })
+      },
+    })
+  },
 
 
 
@@ -39,7 +82,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function(options) {
+
 
   },
 
@@ -54,7 +98,14 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+    var that = this
+    var list = that.data.addressList
+    if (list.length != 0) {
+      wx.setStorage({
+        key: 'userAddress',
+        data: list,
+      })
+    }
   },
 
   /**
