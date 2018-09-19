@@ -15,13 +15,13 @@
       </view>
       <view class="page__desc" style='height:28px;color:#000;margin-left:80rpx;margin-top:30rpx'>{{item.provinceName}}{{item.cityName}}{{item.countyName}}{{item.detailInfo}}</view>
       <view class="weui-cell" style='margin-right:40rpx;margin-top:30rpx' />
-        <checkbox id='{{item.addressId}}' checked='{{item.isDefault}}' style='position:relative;left:30rpx;bottom:15rpx' bindtap='updateDefault'>默认地址</checkbox>
+        <checkbox id='{{item.addressId}}' disabled='{{item.isDefault}}' checked='{{item.isDefault}}' style='position:relative;left:30rpx;bottom:15rpx' bindtap='updateDefault'>默认地址</checkbox>
       <view class='address-head-style' style='position:relative;bottom:15rpx;float:right'>
-        <view class='address-head-style' style='justify-content:flex-start'>
+        <view id='{{item.addressId}}' class='address-head-style' style='justify-content:flex-start' bindtap='updateAddress'>
           <image src='../../images/edit.png' style='width:40rpx;height:40rpx;'></image>
           <view class="page__desc" style='color:#000'>修改</view>
         </view>
-        <view class='address-head-style' style='justify-content:flex-start'>
+        <view id='{{item.addressId}}' class='address-head-style' style='justify-content:flex-start' bindtap='deleteAddress'>
           <image src='../../images/delete.png' style='width:40rpx;height:40rpx'></image>
           <view class="page__desc" style='color:#000'>删除</view>
         </view>

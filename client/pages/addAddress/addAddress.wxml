@@ -5,7 +5,7 @@
       <view class="weui-label">收件人</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入收件人" bindinput='getUserName' />
+      <input class="weui-input" placeholder="请输入收件人" value='{{userName}}' bindinput='getUserName' />
     </view>
   </view>
   <view class="weui-cell weui-cell_input weui-cell_vcode">
@@ -13,7 +13,7 @@
       <view class="weui-label">手机号</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入手机号" bindinput='getUserPhone' />
+      <input class="weui-input" placeholder="请输入手机号" value='{{userPhone}}' bindinput='getUserPhone' />
     </view>
   </view>
   <view class="weui-cell weui-cell_input">
@@ -31,7 +31,7 @@
       <view class="weui-label">详细地址</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="街道/门号" bindinput='getDetail' />
+      <input class="weui-input" placeholder="街道/门号" value='{{detail}}' bindinput='getDetail' />
     </view>
   </view>
 </view>

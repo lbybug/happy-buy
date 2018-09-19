@@ -73,7 +73,7 @@ checkbox .wx-checkbox-input {
 /* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
 
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
-    border: none;
+    /* border: none; */
     background: red;
 }
 

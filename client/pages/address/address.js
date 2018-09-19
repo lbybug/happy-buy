@@ -26,10 +26,10 @@ Page({
     })
   },
 
-  addWeChatAddress: function (list, res, flag) {
+  addWeChatAddress: function(list, res, flag) {
     var that = this
     list[list.length] = {
-      addressId: "address_"+list.length,
+      addressId: "address_" + list.length,
       cityName: res.cityName,
       countyName: res.countyName,
       detailInfo: res.detailInfo,
@@ -50,15 +50,78 @@ Page({
     })
   },
 
-  updateDefault:function(res){
-    console.log(res)
+  updateDefault: function(res) { //更新默认地址
+    var that = this
+    var list = that.data.addressList
+    var index = res.currentTarget.id.split('_')[1]
+    var flag = list[index].isDefault
+    if (flag) {
+      flag = true
+    } else {
+      wx.showLoading({
+        title: '正在切换默认地址',
+      })
+      for (var i = 0; i < list.length; ++i) {
+        if (i != index) {
+          list[i].isDefault = false
+        }
+      }
+      list[index].isDefault = true
+    }
+    setTimeout(function() {
+      wx.hideLoading()
+      that.setData({
+        addressList: list
+      })
+    }, 800)
+
+  },
+
+  deleteAddress: function(res) { //删除地址
+    var that = this
+    var list = that.data.addressList
+    var index = res.currentTarget.id.split('_')[1]
+    var tmpList = []
+    var num = 0
+    var flag = list[index].isDefault
+    wx.showModal({
+      title: '提示',
+      content: '确定删除这条地址吗？',
+      success: () => {
+        for (var i = 0; i < list.length; ++i) {
+          if (i != index) {
+            tmpList[num] = list[i]
+            tmpList[num].addressId = "address_" + num
+            num++
+          }
+        }
+        if(tmpList.length != 0){
+          if (flag) {
+            tmpList[0].isDefault = true
+          }
+        }
+        that.setData({
+          addressList: tmpList
+        })
+      },
+      fail: () => {
+
+      }
+    })
+  },
+  updateAddress: function(res) { //更新地址
+    var that = this
+    var index = res.currentTarget.id.split('_')[1]
+    wx.navigateTo({
+      url: '../addAddress/addAddress?updateIndex=' + index,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // wx.clearStorage()
+    wx.clearStorage()
     var that = this
     wx.getStorage({
       key: 'userAddress',

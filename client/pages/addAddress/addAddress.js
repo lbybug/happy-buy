@@ -9,6 +9,8 @@ Page({
     userPhone: "",
     detail: "",
     region: ['---', '---', '---'],
+    isUpdate: false,
+    preIndex: 0
   },
 
   selectRegion: function(res) {
@@ -47,26 +49,39 @@ Page({
     var phone = that.data.userPhone
     var region = that.data.region
     var detail = that.data.detail
+    var preIndex = that.data.preIndex
+    var isUpdate = that.data.idUpdate
     var pages = getCurrentPages()
     var prePages = pages[pages.length - 2]
     console.log(prePages)
-    if (isAdd) {
-      var list = prePages.data.addressList
-      var newAddress = {
-        cityName: region[1],
-        countyName: region[2],
-        detailInfo: detail,
-        errMsg: "ok",
-        nationalCode: "null",
-        postalCode: "null",
-        provinceName: region[0],
-        telNumber: phone,
-        userName: name
-      }
-      list[list.length] = newAddress
-      prePages.setData({
-        addressList: list
-      })
+      if (isAdd) {
+        var list = prePages.data.addressList
+        var isDefault = false
+        if (list.length == 0) {
+          isDefault = true
+        }
+        if(isUpdate){
+          isDefault = list[preIndex].isDefault
+        }else{
+          preIndex = list.length
+        }
+        var newAddress = {
+          addressId: "address_" + preIndex,
+          cityName: region[1],
+          countyName: region[2],
+          detailInfo: detail,
+          errMsg: "ok",
+          nationalCode: "null",
+          postalCode: "null",
+          provinceName: region[0],
+          telNumber: phone,
+          userName: name,
+          isDefault: isDefault
+        }
+        list[preIndex] = newAddress
+        prePages.setData({
+          addressList: list
+        })
     }
     wx.navigateBack({
       delta: 1
@@ -78,7 +93,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var that = this
+    var pages = getCurrentPages()
+    var prePages = pages[pages.length - 2]
+    console.log(prePages)
+    if (options != null) {
+      console.log(options)
+      var index = options.updateIndex
+      var data = prePages.data.addressList[index]
+      that.setData({
+        isUpdate: true,
+        preIndex: index,
+        userName: data.userName,
+        userPhone: data.telNumber,
+        detail: data.detailInfo,
+        region: [data.provinceName, data.cityName, data.countyName]
+      })
+    }
   },
 
   /**
