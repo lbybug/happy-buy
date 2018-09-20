@@ -5,13 +5,13 @@
     </view>
     <!--未使用-->
     <view hidden="{{currentTab!==0}}">
-
+    <view>未使用</view>
     </view>
     <!--已使用-->
     <view hidden="{{currentTab!==1}}">
-
+    <view>已使用</view>
     </view>
     <!--已过期-->
     <view hidden="{{currentTab!==2}}">
-    
+    <view>已过期</view>
     </view>
