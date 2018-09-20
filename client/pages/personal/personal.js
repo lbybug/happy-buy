@@ -12,41 +12,41 @@ Page({
       "url": "../../images/be_payment.png",
       "status": "待付款",
       "isHandler": false,
-      "handlerNum": "3"
+      "handlerNum": "92"
     }, {
       "id": "statues_1",
       "url": "../../images/be_delivered.png",
       "status": "待发货",
       "isHandler": false,
-      "handlerNum": "4"
+      "handlerNum": "19"
 
     }, {
       "id": "statues_2",
       "url": "../../images/be_receipt.png",
       "status": "待收货",
-      "isHandler": true,
-      "handlerNum": "0"
+      "isHandler": false,
+      "handlerNum": "23"
     }, {
       "id": "statues_3",
       "url": "../../images/be_evaluated.png",
       "status": "待评价",
       "isHandler": false,
-      "handlerNum": "3"
+      "handlerNum": "113"
     }, {
       "id": "statues_4",
       "url": "../../images/be_return.png",
       "status": "退换货",
-      "isHandler": true,
-      "handlerNum": "0"
+      "isHandler": false,
+      "handlerNum": "50"
     }],
     personalService: [{
         "id": "service_0",
-        "url": "../copyWeChat/copyWeChat",
+        "url": "../coupon/coupon",
         "serviceImage": "../../images/coupon.png",
         "name": "优惠券"
       }, {
         "id": "service_1",
-        "url": "../copyWeChat/copyWeChat",
+        "url": "../collection/collection",
         "serviceImage": "../../images/favor.png",
         "name": "收藏"
       }, {
@@ -73,13 +73,13 @@ Page({
       "name": "耳乐保夏季睡觉护眼罩睡眠遮光透气男女士款耳塞防噪音三件套",
       "goodsImage": "../../goodsImage/200836455467636230.jpg",
       "price": "￥29.89",
-      "buyer":"3550"
+      "buyer": "3550"
     }, {
       "id": "goods_1",
       "name": "男士长袖T恤秋季新款圆领卫衣潮流打底衫2018秋衣韩版上衣服男装",
       "goodsImage": "../../goodsImage/608738460262225988.jpg",
       "price": "￥68.03",
-        "buyer": "12505"
+      "buyer": "12505"
     }, {
       "id": "goods_2",
       "name": "3D菱形极光玻璃6s苹果x手机壳iphone7plus奢华保护套8p防摔全包女",
@@ -91,11 +91,11 @@ Page({
       "name": "人字拖男时尚外穿情侣男士拖鞋夏夹脚防滑凉拖黑色沙滩凉鞋潮室外",
       "goodsImage": "../../goodsImage/772626852914700328.jpg",
       "price": "￥18.75",
-        "buyer": "950"
+      "buyer": "950"
     }]
   },
 
-  personalSet:function(){ //个人信息设置
+  personalSet: function() { //个人信息设置
 
   },
 
@@ -128,8 +128,7 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
-  },  
+  onUnload: function() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作

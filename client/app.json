@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/personal/personal",
+    "pages/collection/collection",
     "pages/addAddress/addAddress",
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/shopcar/shopcar",
     "pages/copyWeChat/copyWeChat",
-    "pages/address/address"
+    "pages/address/address",
+    "pages/coupon/coupon"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

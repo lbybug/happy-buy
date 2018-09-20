@@ -50,38 +50,39 @@ Page({
     var region = that.data.region
     var detail = that.data.detail
     var preIndex = that.data.preIndex
-    var isUpdate = that.data.idUpdate
+    var isUpdate = that.data.isUpdate
     var pages = getCurrentPages()
     var prePages = pages[pages.length - 2]
     console.log(prePages)
-      if (isAdd) {
-        var list = prePages.data.addressList
-        var isDefault = false
-        if (list.length == 0) {
-          isDefault = true
-        }
-        if(isUpdate){
-          isDefault = list[preIndex].isDefault
-        }else{
-          preIndex = list.length
-        }
-        var newAddress = {
-          addressId: "address_" + preIndex,
-          cityName: region[1],
-          countyName: region[2],
-          detailInfo: detail,
-          errMsg: "ok",
-          nationalCode: "null",
-          postalCode: "null",
-          provinceName: region[0],
-          telNumber: phone,
-          userName: name,
-          isDefault: isDefault
-        }
-        list[preIndex] = newAddress
-        prePages.setData({
-          addressList: list
-        })
+    if (isAdd) {
+      var list = prePages.data.addressList
+      var isDefault = false
+      if (list.length == 0) {
+        isDefault = true
+      }
+      if (isUpdate) {
+        isDefault = list[preIndex].isDefault
+      } else {
+        preIndex = list.length
+      }
+      console.log(isDefault)
+      var newAddress = {
+        addressId: "address_" + preIndex,
+        cityName: region[1],
+        countyName: region[2],
+        detailInfo: detail,
+        errMsg: "ok",
+        nationalCode: "null",
+        postalCode: "null",
+        provinceName: region[0],
+        telNumber: phone,
+        userName: name,
+        isDefault: isDefault
+      }
+      list[preIndex] = newAddress
+      prePages.setData({
+        addressList: list
+      })
     }
     wx.navigateBack({
       delta: 1

@@ -1,0 +1,10 @@
+<!--client/pages/address/address.wxml-->
+<view wx:if='{{collectionList.length == 0}}' class='page-bg'>
+  <view class='address-bg'>
+    <image src='../../images/favor.png' class='address-image'></image>
+    <view class="weui-cells__title">您还没有收藏</view>
+  </view>
+</view>
+<view wx:else class='page-bg'>
+ 
+</view>
