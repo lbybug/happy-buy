@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/personal/personal",
+    "pages/showshop/showshop",
     "pages/collection/collection",
     "pages/addAddress/addAddress",
     "pages/index/index",

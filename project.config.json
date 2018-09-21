@@ -25,7 +25,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -38,6 +38,12 @@
 					"name": "coupon",
 					"pathName": "pages/coupon/coupon",
 					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "show",
+					"pathName": "pages/showshop/showshop",
+					"query": "index=1"
 				}
 			]
 		}

@@ -1,0 +1,7 @@
+<swiper style='height:200px' indicator-dots="true" indicator-active-color='yellow'>
+  <block wx:for="{{imgUrls}}" wx:key='{{item}}'>
+    <swiper-item>
+      <image src="{{item}}" style='width:100%' mode='scaleToFill'/>
+    </swiper-item>
+  </block>
+</swiper>
